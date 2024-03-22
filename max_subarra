@@ -1,0 +1,17 @@
+ll kadane_algorithm(vector<ll>& arr){
+    ll max_element=-1e18;
+    ll sum=0;
+    bool ok=false;
+    for(int i=0; i<arr.size(); i++){
+        sum+=arr[i];
+        if(sum>max_element){
+            max_element=sum;
+        }
+        if(sum<0) sum=0;
+       
+        
+    }
+    
+    return max(max_element,sum);
+
+}
